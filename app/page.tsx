@@ -17,7 +17,7 @@ export default function Home() {
       {/* </div> */}
       <div className="flex">
         {/* <!-- 左側：メニュー --> */}
-        <aside className="bg-gray-100 border-r border-gray-300 overflow-y-auto">
+        <aside className="bg-gray-100 border-r border-gray-300 overflow-y-auto flex-none">
           <div className="p-4">
             <h2 className="text-xl font-bold mb-4 text-gray-800">メニュー</h2>
             <nav>
@@ -68,7 +68,7 @@ export default function Home() {
         </aside>
 
         {/* <!-- 真ん中：メインコンテンツ --> */}
-        <main className="bg-white overflow-y-auto">
+        <main className="bg-white overflow-y-auto flex-1">
           <div className="p-8 max-w-4xl mx-auto">
             <h1 className="text-3xl font-bold mb-6 text-gray-900">
               メインコンテンツ
@@ -127,7 +127,7 @@ export default function Home() {
         </main>
 
         {/* <!-- 右側：目次 --> */}
-        <aside className="bg-gray-50 border-l border-gray-300 overflow-y-auto">
+        <aside className="bg-gray-50 border-l border-gray-300 overflow-y-auto flex-none">
           <div className="p-4">
             <h2 className="text-xl font-bold mb-4 text-gray-800">目次</h2>
             <nav>
@@ -168,6 +168,13 @@ export default function Home() {
             </nav>
           </div>
         </aside>
+      </div>
+
+      <div className="grid grid-cols-12 gap-4 p-4">
+        {/* 12分割中、8つの升目を使うエリア */}
+        <div className="col-span-8 bg-white border p-4">メインコンテンツ</div>
+        {/* 12分割中、4つの升目を使うエリア */}
+        <div className="col-span-4 bg-gray-50 border p-4">サイドバー</div>
       </div>
     </>
   );

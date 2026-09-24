@@ -1,0 +1,5 @@
+@reference "../globals.css";
+
+.card {
+  @apply space-y-3 bg-red-500;
+}
